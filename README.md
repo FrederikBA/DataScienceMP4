@@ -2,11 +2,12 @@
 Data Science Mini Project 4
 
 ### Server:
-Run the server:
-1. Run the server: `uvicorn main:app --reload`
-2. Server URL: `http://127.0.0.1:8000`
+1. Navigate to /server
+2. Run the server: `uvicorn main:app --reload`
+3. Server URL: `http://127.0.0.1:8000`
 
 
 ### Client:
-1. Install dependencies: `npm install`
-2. Run the client: `npm run start`
+1. Navigate to /client
+2. Install dependencies: `npm install`
+3. Run the client: `npm run start`
