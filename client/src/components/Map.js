@@ -1,9 +1,15 @@
-const Home = () => {
+import { useState, useEffect, useMemo } from "react"
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api"
+
+const Map = () => {
+    const { } = useLoadScript({ googleMapsApiKey: "test" })
     return (
-        <div>
-            <h1>Welcome</h1>
+        <div class="container">
+            <div class="center">
+                <h1>Map</h1>
+            </div>
         </div>
     )
 }
 
-export default Home
+export default Map
