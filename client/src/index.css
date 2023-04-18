@@ -37,19 +37,6 @@ ul.header li a:hover:not(.active) {
   background-color: #4CAF50;
 }
 
-.logout {
-  float: right;
-  border: none;
-  background: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  color: white;
-}
-
-.logout:hover {
-  background-color: #111;
-}
-
 .errorMessage {
   color: red;
   font-weight: bold;
