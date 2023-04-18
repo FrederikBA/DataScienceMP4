@@ -7,7 +7,5 @@ Run the server:
 
 
 ### Client:
-Install dependencies
-1. `npm install`
-Run the client
-2. `npm run start`
+1. Install dependencies: `npm install`
+2. Run the client: `npm run start`
