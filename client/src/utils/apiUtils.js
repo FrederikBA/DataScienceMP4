@@ -1,11 +1,16 @@
 import axios from "axios";
 
-const URL = 'http://localhost:8080/CA2_war_exploded/api';
+const URL = 'http://127.0.0.1:8000';
 
 const apiUtils = () => {
 
     const getUrl = () => {
         return URL;
+    }
+
+    const getAxios = () => {
+        const authAxios = axios.create()
+        return authAxios
     }
 
     const getAuthAxios = () => {
@@ -19,6 +24,7 @@ const apiUtils = () => {
 
     return {
         getUrl,
+        getAxios,
         getAuthAxios
     }
 }
