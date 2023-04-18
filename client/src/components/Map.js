@@ -3,7 +3,7 @@ import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 const Map = () => {
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
-        googleMapsApiKey: "AIzaSyAebaaWFVQ1Yxlgp-oOFssnuE2KkJAvrWI"
+        googleMapsApiKey: "need a key"
     })
 
     const containerStyle = {

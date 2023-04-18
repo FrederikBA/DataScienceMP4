@@ -1,7 +1,6 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header';
-import Map from './components/Map';
 import NoMatch from './components/NoMatch';
 import VisualizationOne from './views/VisualizationOne';
 
