@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header';
-import Home from './components/Home';
+import Map from './components/Map';
 import NoMatch from './components/NoMatch';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Map />} />
         <Route path='*' element={<NoMatch />} />
       </Routes>
     </div >

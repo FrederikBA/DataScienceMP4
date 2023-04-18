@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div>
             <ul className='header'>
-                <li><NavLink activeclassname='active' to='/'>Home</NavLink></li>
+                <li><NavLink activeclassname='active' to='/'>Map</NavLink></li>
             </ul>
         </div >
     )
