@@ -21,4 +21,8 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
+    return "Welcome to the Data Science MP4 API"
+
+@app.get("/geodata")
+def read_company_geodata():
     return company_service.get_company_locations()
