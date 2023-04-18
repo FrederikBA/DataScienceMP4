@@ -8,6 +8,7 @@ See the Visualizations notebook
 1. Navigate to /server
 2. Run the server: `uvicorn main:app --reload`
 3. Server URL: `http://127.0.0.1:8000`
+4. Swagger API DOC: `http://127.0.0.1:8000`
 
 
 ### Client:
