@@ -1,6 +1,9 @@
 # DataScienceMP4
 Data Science Mini Project 4
 
+### Python charts:
+See the Visualizations notebook
+
 ### Server:
 1. Navigate to /server
 2. Run the server: `uvicorn main:app --reload`
