@@ -1,15 +1,30 @@
-import { useState, useEffect, useMemo } from "react"
-import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api"
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
 const Map = () => {
-    const { } = useLoadScript({ googleMapsApiKey: "test" })
-    return (
-        <div class="container">
-            <div class="center">
-                <h1>Map</h1>
-            </div>
-        </div>
-    )
+    const { isLoaded } = useJsApiLoader({
+        id: 'google-map-script',
+        googleMapsApiKey: "AIzaSyAebaaWFVQ1Yxlgp-oOFssnuE2KkJAvrWI"
+    })
+
+    const containerStyle = {
+        width: '100%',
+        height: '600px'
+    };
+
+    const center = {
+        lat: 55.676098,
+        lng: 12.568337
+    };
+
+    return isLoaded ? (
+        <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={8}
+        >
+            <></>
+        </GoogleMap>
+    ) : <></>
 }
 
 export default Map
