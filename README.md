@@ -3,7 +3,8 @@ Data Science Mini Project 4
 
 ### Server:
 Run the server:
-1. `uvicorn main:app --reload`
+1. Run the server: `uvicorn main:app --reload`
+2. Server URL: `http://127.0.0.1:8000`
 
 
 ### Client:
