@@ -1,6 +1,7 @@
 .DS_Store
 .idea/
 .ipynb_checkpoints
+notebooks/__pycache__
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
