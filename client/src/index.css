@@ -46,3 +46,12 @@ ul.header li a:hover:not(.active) {
 .center {
   text-align: center;
 }
+
+.form-input {
+  width: 50% !important;
+  margin: 0 auto;
+}
+
+.prediction {
+  margin-top: 50px;
+}

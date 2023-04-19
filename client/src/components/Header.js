@@ -6,6 +6,7 @@ const Header = () => {
         <div>
             <ul className='header'>
                 <li><NavLink activeclassname='active' to='/'>Map</NavLink></li>
+                <li><NavLink activeclassname='active' to='/predict'>Predict Company Location</NavLink></li>
             </ul>
         </div >
     )
