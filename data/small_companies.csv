@@ -1,0 +1,24 @@
+company,address,municipality,income,employees,municipality_code
+NorthTech ApS,"Wildersgade 51, København K",København,5,20,1
+PFA,"Sundkrogsgade 4, København Ø",København,-79000,1464,1
+Netcompany A/S,"Grønningen 17, København K",København,583573,2340,1
+Elbek-vejrup,"Tangen 6, Aarhus N",Aarhus,43935,171,2
+ELLAB A/S,"Trollesmindealle 25, Hillerød",Hillerød,136500,166,3
+Wilke A/S,"Gråbrødrepassagen 9, Odense C",Odense,3834,175,4
+Novo Nordisk,"Novo Alle 1, Bagsværd",Gladsaxe,47523000,22150,5
+KMD A/S,"Lautrupparken 40, Ballerup",Ballerup,53926,1855,6
+Alpha Solutions,"Gothersgade 14, København K",København,3477,59,1
+Formpipe,"Lautrupvang 1, Ballerup",Ballerup,36583,87,6
+Groupm Denmark A/S,"Holmbladsgade 133, København S",København,1195,266,1
+Wash World ApS,"Dynamovej 11, Søborg",Gladsaxe,14822,72,5
+Carve Consulting P/S,"Købmagergade 11, København K",København,3821,46,1
+Precure,"Bryggeristræde 2, Allinge",Bornholm,-805,15,7
+Meew,"Wildersgade 9, København K",København,451,43,1
+Ooono,"Gearhalsvej 1, Valby",København,7001,40,1
+Nuuday A/S,"Teglholmsgade 1, København SV",København,-390000,3642,1
+Dynatest A/S,"Tempovej 27, Ballerup",Ballerup,3581,36,6
+Lejka,"Jagtvej 157, København N",København,-1341,3,1
+"Eriksholm Research Centre, Oticon","Kongebakken 9, Smørum",Egedal,1525319,1602,8
+Dafolo,"Suderbovej 22, Frederikshavn",Frederikshavn,36271,83,9
+Topdanmark,"Borupvang 4, Ballerup",Ballerup,2170000,2317,6
+Brøndby IF,"Brøndby Stadion 30, Brøndby",Brøndby,83418,297,10
