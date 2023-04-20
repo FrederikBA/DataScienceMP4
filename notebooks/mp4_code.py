@@ -60,10 +60,9 @@ def classify_review(review):
 
 def reviews_classification():
     reviews = webscraping()
+    classification = []
     # Test the function with a list of sample reviews
     for review in reviews:
-        classification = classify_review(review)
-        print(classification)
-        print(f'{review} \n ')
+        classification.append(classify_review(review))
     
     return classification
