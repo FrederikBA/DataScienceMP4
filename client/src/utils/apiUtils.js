@@ -9,23 +9,13 @@ const apiUtils = () => {
     }
 
     const getAxios = () => {
-        const authAxios = axios.create()
-        return authAxios
-    }
-
-    const getAuthAxios = () => {
-        const authAxios = axios.create({
-            headers: {
-                'x-access-token': localStorage.getItem('jwtToken')
-            }
-        })
-        return authAxios
+        const baseAxios = axios.create()
+        return baseAxios
     }
 
     return {
         getUrl,
         getAxios,
-        getAuthAxios
     }
 }
 

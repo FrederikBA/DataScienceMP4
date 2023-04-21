@@ -1,5 +1,5 @@
 import apiUtils from "../utils/apiUtils"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
 const VisualizationTwo = () => {
     const URL = apiUtils.getUrl()
@@ -40,7 +40,7 @@ const VisualizationTwo = () => {
                 </form>
                 <button onClick={predict} type="submit" className="btn btn-outline-secondary">Predict</button>
                 <div>
-                    {!isLoading ? <h3 className="prediction">The company is located in: {prediction}</h3> : (<h1></h1>)}
+                    {!isLoading ? <h3 className="prediction">The company is located in: {prediction}</h3> : <br></br>}
                 </div>
             </div>
         </div>
