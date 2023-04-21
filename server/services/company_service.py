@@ -26,7 +26,7 @@ def get_company_locations():
 
 
 def predict_company_location(income, employees):
-    df = pd.read_csv('../data/small_companies.csv')
+    df = pd.read_csv('../data/companies_municipalities.csv')
 
     unique_municipalities = df['municipality'].unique()
 
@@ -64,3 +64,9 @@ def predict_company_location(income, employees):
 
 
     return key
+
+def get_company_graph():
+    df = pd.read_csv('../data/companies_municipalities.csv')
+    nodes = []
+    
+    return ""

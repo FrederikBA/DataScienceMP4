@@ -25,11 +25,13 @@ def read_root():
     return "Welcome to the Data Science MP4 API"
 
 @app.get("/geodata")
-def read_company_geodata():
+def get_company_geodata():
     return company_service.get_company_locations()
 
-PredictDTO = dtos.PredictDTO
+@app.get("/companygraph")
+def get_company_graph():
+    return company_service.get_company_graph()
 
 @app.post("/predict")
-def predict_company_location(predictDTO: PredictDTO):
+def predict_company_location(predictDTO: dtos.PredictDTO):
     return company_service.predict_company_location(predictDTO.income, predictDTO.employees)
