@@ -8,7 +8,7 @@ const VisualizationThree = () => {
 
     useEffect(() => {
         const getGraphData = async () => {
-            const response = await apiUtils.getAxios().get(URL + '/companygraph')
+            const response = await apiUtils.getAxios().get(URL + '/graph')
             setGraphData(response.data)
         }
         getGraphData()
@@ -22,7 +22,6 @@ const VisualizationThree = () => {
         <div>
             <ForceGraph3D
                 graphData={graphData}
-                nodeAutoColorBy="green"
             />
         </div>
     )

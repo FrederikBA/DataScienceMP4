@@ -28,9 +28,13 @@ def read_root():
 def get_company_geodata():
     return company_service.get_company_locations()
 
-@app.get("/companygraph")
+@app.get("/graph")
 def get_company_graph():
     return company_service.get_company_graph()
+
+@app.get("/numbers")
+def get_company_numbers():
+    return company_service.get_company_numbers()
 
 @app.post("/predict")
 def predict_company_location(predictDTO: dtos.PredictDTO):

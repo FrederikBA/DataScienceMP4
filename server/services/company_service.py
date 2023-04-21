@@ -5,9 +5,7 @@ from bs4 import BeautifulSoup
 import json
 
 # sklearn for machine learning methods
-from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
-from sklearn import tree
 from sklearn import model_selection
 from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score
@@ -29,7 +27,7 @@ def get_company_locations():
 
 
 def predict_company_location(income, employees):
-    df = pd.read_csv('../data/companies_municipalitiesç.csv')
+    df = pd.read_csv('../data/companies_municipalities.csv')
 
     unique_municipalities = df['municipality'].unique()
 
@@ -126,3 +124,15 @@ def get_company_graph():
     }
 
     return graph
+
+def get_company_numbers():
+    df = pd.read_csv('../data/companies.csv')
+
+    companies = []
+
+    for index, row in df.iterrows():
+        company = {"name": row['company'], "employees": row['employees'], "income": row['income']}
+
+        companies.append(company)
+
+    return companies
