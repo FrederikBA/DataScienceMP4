@@ -30,12 +30,12 @@ const VisualizationTwo = () => {
                 <h1>Predict Company Location</h1>
                 <form onChange={handleInput}>
                     <div className="mb-3 form-input">
-                        <label className="form-label">Employees</label>
-                        <input type="text" className="form-control" id="employees" />
-                    </div>
-                    <div className="mb-3 form-input">
                         <label className="form-label">Income</label>
                         <input type="text" className="form-control" id="income" />
+                    </div>
+                    <div className="mb-3 form-input">
+                        <label className="form-label">Employees</label>
+                        <input type="text" className="form-control" id="employees" />
                     </div>
                 </form>
                 <button onClick={predict} type="submit" className="btn btn-outline-secondary">Predict</button>

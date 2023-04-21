@@ -1,9 +1,10 @@
-import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header';
-import NoMatch from './components/NoMatch';
+import NoMatch from './views/NoMatch';
 import VisualizationOne from './views/VisualizationOne';
 import VisualizationTwo from './views/VisualizationTwo';
+import VisualizationThree from './views/VisualizationThree';
+import VisualizationFour from './views/VisualizationFour';
 
 function App() {
 
@@ -13,6 +14,8 @@ function App() {
       <Routes>
         <Route path='/' element={<VisualizationOne />} />
         <Route path='/predict' element={<VisualizationTwo />} />
+        <Route path='/3d' element={<VisualizationThree />} />
+        <Route path='/victory' element={<VisualizationFour />} />
         <Route path='*' element={<NoMatch />} />
       </Routes>
     </div >
