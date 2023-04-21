@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import requests
+from bs4 import BeautifulSoup
 
 # sklearn for machine learning methods
 from sklearn.linear_model import LinearRegression
@@ -65,8 +67,29 @@ def predict_company_location(income, employees):
 
     return key
 
-def get_company_graph():
-    df = pd.read_csv('../data/companies_municipalities.csv')
-    nodes = []
+def get_reviews(url):
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, "html.parser")
+
+    review_divs = soup.find_all("div", {"class": "styles_cardWrapper__LcCPA styles_show__HUXRb styles_reviewCard__9HxJJ"})
+
+    reviews = []
+
+    for div in review_divs:
+        review_paragraph = div.find("p")
+        reviews.append(review_paragraph.text)
     
-    return ""
+    return reviews
+
+def get_company_graph():
+    df = pd.read_excel('../data/company_reviews.xlsx')
+    df = df.dropna()
+
+    companies = []
+    
+    for index, row in df.iterrows():
+        company = {row['company']: get_reviews(row['trustpilot'])}
+
+        companies.append(company)
+
+    return companies
