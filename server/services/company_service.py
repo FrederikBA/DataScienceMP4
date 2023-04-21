@@ -2,11 +2,10 @@ import pandas as pd
 import numpy as np
 import requests
 from bs4 import BeautifulSoup
+import json
 
 # sklearn for machine learning methods
-from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
-from sklearn import tree
 from sklearn import model_selection
 from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score
@@ -28,7 +27,7 @@ def get_company_locations():
 
 
 def predict_company_location(income, employees):
-    df = pd.read_csv('../data/companies_municipalitiesç.csv')
+    df = pd.read_csv('../data/companies_municipalities.csv')
 
     unique_municipalities = df['municipality'].unique()
 
@@ -88,7 +87,51 @@ def get_company_graph():
     companies = []
     
     for index, row in df.iterrows():
-        company = {row['company']: get_reviews(row['trustpilot'])}
+        company = {"name": row['company'], "reviews": get_reviews(row['trustpilot'])}
+
+        companies.append(company)
+
+    nodes = []
+    links = []
+
+    for company in companies:
+        company_id = company["name"]
+        company_name = company["name"]
+        review_count = len(company["reviews"])
+        nodes.append({
+            "id": company_id,
+            "name": company_name,
+            "val": review_count,
+            "color": "red"
+        })
+        
+        for i, review in enumerate(company["reviews"]):
+            review_id = f"{company_id}-review-{i}"
+            nodes.append({
+            "id": review_id,
+            "name": review,
+            "val": i + 1,
+            "color": "white"
+        })
+            links.append({
+            "source": company_id,
+            "target": review_id
+        })
+            
+    graph = {
+    "nodes": nodes,
+    "links": links
+    }
+
+    return graph
+
+def get_company_numbers():
+    df = pd.read_csv('../data/companies.csv')
+
+    companies = []
+
+    for index, row in df.iterrows():
+        company = {"name": row['company'], "employees": row['employees'], "income": row['income']}
 
         companies.append(company)
 

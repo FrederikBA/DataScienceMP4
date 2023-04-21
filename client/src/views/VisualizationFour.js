@@ -31,6 +31,7 @@ const data2012 = [
   ];
   
 const VisualizationFour = () => {
+
     return (
 
         <div className="center">
