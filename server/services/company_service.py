@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import requests
 from bs4 import BeautifulSoup
+import json
 
 # sklearn for machine learning methods
 from sklearn.linear_model import LinearRegression
@@ -88,8 +89,40 @@ def get_company_graph():
     companies = []
     
     for index, row in df.iterrows():
-        company = {row['company']: get_reviews(row['trustpilot'])}
+        company = {"name": row['company'], "reviews": get_reviews(row['trustpilot'])}
 
         companies.append(company)
 
-    return companies
+    nodes = []
+    links = []
+
+    for company in companies:
+        company_id = company["name"]
+        company_name = company["name"]
+        review_count = len(company["reviews"])
+        nodes.append({
+            "id": company_id,
+            "name": company_name,
+            "val": review_count
+        })
+        
+        for i, review in enumerate(company["reviews"]):
+            review_id = f"{company_id}-review-{i}"
+            nodes.append({
+            "id": review_id,
+            "name": review,
+            "val": i + 1
+        })
+            links.append({
+            "source": company_id,
+            "target": review_id
+        })
+            
+    graph = {
+    "nodes": nodes,
+    "links": links
+    }
+
+    json_data = json.dumps(graph, indent=4)
+
+    return graph
