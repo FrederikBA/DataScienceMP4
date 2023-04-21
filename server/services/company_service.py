@@ -103,7 +103,8 @@ def get_company_graph():
         nodes.append({
             "id": company_id,
             "name": company_name,
-            "val": review_count
+            "val": review_count,
+            "color": "red"
         })
         
         for i, review in enumerate(company["reviews"]):
@@ -111,7 +112,8 @@ def get_company_graph():
             nodes.append({
             "id": review_id,
             "name": review,
-            "val": i + 1
+            "val": i + 1,
+            "color": "white"
         })
             links.append({
             "source": company_id,
@@ -122,7 +124,5 @@ def get_company_graph():
     "nodes": nodes,
     "links": links
     }
-
-    json_data = json.dumps(graph, indent=4)
 
     return graph
