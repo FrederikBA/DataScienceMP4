@@ -1,7 +1,7 @@
 # DataScienceMP4
 <h4>Janus, Julius, Frederik </h4>
 
-### Python charts
+## Python charts
 See the Visualizations notebook
 
 ## Server
