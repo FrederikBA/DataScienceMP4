@@ -3,10 +3,10 @@ Data Science Mini Project 4
 
 Janus, Julius, Frederik
 
-### Python charts:
+### Python charts
 See the Visualizations notebook
 
-## Server:
+## Server
 
 ### Dependencies
 ```sh
@@ -21,14 +21,14 @@ pip install uvicorn
 pip install pydantic
 ```
 
-### Usage:
+### Usage
 1. Navigate to /server
 2. Run the server: `uvicorn main:app --reload`
 3. Server URL: `http://127.0.0.1:8000`
 4. Swagger API Documentation: `http://127.0.0.1:8000/docs`
 
 
-## Client:
+## Client
 
 ### Usage:
 1. Navigate to /client
