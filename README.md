@@ -1,7 +1,5 @@
 # DataScienceMP4
-Data Science Mini Project 4
-
-Janus, Julius, Frederik
+##  Janus, Julius, Frederik
 
 ### Python charts
 See the Visualizations notebook
