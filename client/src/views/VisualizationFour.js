@@ -24,8 +24,8 @@ const VisualizationFour = () => {
   return (
     <div className="center">
       <h1>Four</h1>
-      <VictoryChart domainPadding={25} theme={VictoryTheme.material}>
-      <VictoryAxis style={{tickLabels: {angle: 90, fontFamily: 'Arial', fontSize: 12 } }}/>
+      <VictoryChart domainPadding={{ x: 30 }} theme={VictoryTheme.material}>
+      <VictoryAxis style={{tickLabels: {angle: 90,  fontSize: 4, padding: 30, domainPadding: 5 } }}/>
         <VictoryAxis dependentAxis   />
         <VictoryBar  
        
