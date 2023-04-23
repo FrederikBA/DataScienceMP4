@@ -1,5 +1,5 @@
 # DataScienceMP4
-<h3>Janus, Julius, Frederik </h3>
+<h4>Janus, Julius, Frederik </h4>
 
 ### Python charts
 See the Visualizations notebook
